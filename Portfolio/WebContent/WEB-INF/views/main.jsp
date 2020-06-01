@@ -5,6 +5,31 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	
+	function inputContact(){
+		if(document.contactform.name.value==''){
+	    	alert("기관 및 담당자명을 입력하세요.");
+	    return false;
+	    }else if(document.contactform.email.value==''){
+	    	alert("E-mail 주소를 입력하세요.");   
+	    return false;
+	    }else if(document.contactform.subject.value==''){
+			alert("제목을 입력하세요.");   
+		return false;
+		}else if(document.contactform.content.value==''){
+			alert("내용을 입력하세요.");   
+		return false;
+		}else{
+			alert("전송되었습니다.");  	
+	    	document.contactform.submit();
+	    return true;
+	    }
+
+	
+}
+
+</script>
 	<head>
 		<title>DO YOU WANT DEVELOPER?!!</title>
 		<meta charset="utf-8" />
@@ -100,33 +125,28 @@
 				<div class="container">
 					<header>
 						<h2>진행 프로젝트</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
+						<p>현재까지 진행해온 프로젝트를 소개합니다.</p>
 					</header>
 					<div class="row">
 						<article class="box style2">
 								<span><img src="images/kms_pr.png" alt="" /></span>
-								<h3><a href="#">Magna feugiat</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3><a href="#">건강보험심사평가원</a></h3>
+								<p>내부의 전화상담원들이 상담시에 참고할 수 있는 메뉴얼이 있는 검색 개발</p>
 							</article>
 							<article class="box style2">
-								<span><img src="images/kms_pr.png" alt="" /></span>
-								<h3><a href="#">Magna feugiat</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<span><img src="images/kipf_pr.PNG" alt="" /></span>
+								<h3><a href="#">한국조세재정연구원</a></h3>
+								<p>일반 사용자들이 한국조세재정연구원의 홈페이지에서 검색을 할 수 있도록 검색 개발</p>
 							</article>
 							<article class="box style2">
-								<span><img src="images/kms_pr.png" alt="" /></span>
-								<h3><a href="#">Magna feugiat</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-							<article class="box style2">
-								<span><img src="images/kms_pr.png" alt="" /></span>
-								<h3><a href="#">Magna feugiat</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<span><img src="images/nanet_pr.PNG" alt="" /></span>
+								<h3><a href="#">국회·지방의회 의정정보 시스템</a></h3>
+								<p>지방의회의 회의록, 의안, 의원정보등을 크롤링을 이용하여 데이터 구축 및 유지보수</p>
 							</article>
 					</div>
 					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
+						<p>어떻게 당신을 고용할 수 있습니까?</p>
+						<a href="#contact" class="button large scrolly">연락하기 ▼</a>
 					</footer>
 				</div>
 			</article>
@@ -135,29 +155,29 @@
 			<article id="contact" class="wrapper style4">
 				<div class="container medium">
 					<header>
-						<h2>Have me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
+						<h2>저에게 연락할 수 있는 방법입니다.</h2>
+						<p>이 포트폴리오 페이지가 충분히 매력적이라면 연락주세요</p>
 					</header>
 					<div class="row">
 						<div class="col-12">
-							<form method="post" action="#">
+							<form method="post" onSubmit="return inputContact()" id="contactform" name="contactform" action="main.do" accept-charset="UTF-8">
 								<div class="row">
 									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
+										<input type="text" name="name" id="name" placeholder="기업/담당자명" />
 									</div>
 									<div class="col-6 col-12-small">
 										<input type="text" name="email" id="email" placeholder="Email" />
 									</div>
 									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
+										<input type="text" name="subject" id="subject" placeholder="제목" />
 									</div>
 									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
+										<textarea name="content" id="content" placeholder="내용"></textarea>
 									</div>
 									<div class="col-12">
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
+											<li><input type="submit" value="메세지 보내기" /></li>
+											<li><input type="reset" value="내용 지우기" class="alt" /></li>
 										</ul>
 									</div>
 								</div>

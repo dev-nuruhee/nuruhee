@@ -21,7 +21,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	String name = "";
 	String email = "";
-	String message = "";
+	String subject = "";
+	String content = "";
 	
 	@RequestMapping(value = "/")
 	public String start(Locale locale, Model model) {
@@ -29,26 +30,25 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/main.do")
-	public String main(Locale locale, Model model) {
+	public String main(Locale locale, Model model, HttpServletRequest request, HttpServletResponse response) {
+		
+		try {
+			
+			NuruheeVO NuruheeVO = new NuruheeVO();
+			MainService MainService = new MainService();
+			request.setCharacterEncoding("UTF-8");	
+			NuruheeVO.setName(request.getParameter("name"));
+			NuruheeVO.setEmail(request.getParameter("email"));
+			NuruheeVO.setSubject(request.getParameter("subject"));
+			NuruheeVO.setContent(request.getParameter("content"));
+			/* MainService.returnAllContact(NuruheeVO); */
+			MainService.inputContact(NuruheeVO);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return "main";
 	}
-	
-	@RequestMapping(value = "/whopage.do")
-	public String whopage(Locale locale, Model model) {
-		return "whopage";
-	}
-	
-	@RequestMapping(value = "/howpage.do")
-	public String howpage(Locale locale, Model model, HttpServletRequest request, HttpServletResponse response) {
-		name = request.getParameter("name");
-		email = request.getParameter("email");
-		message = request.getParameter("message");
-		System.out.println();
-		System.out.println("name:"+name);
-		System.out.println("email:"+email);
-		System.out.println("message:"+message);
-		
-		return "howpage";
-	}
+
 	
 }
