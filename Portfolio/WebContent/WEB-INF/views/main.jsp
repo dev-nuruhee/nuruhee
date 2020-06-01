@@ -99,52 +99,30 @@
 			<article id="portfolio" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>Here’s some stuff I made recently.</h2>
+						<h2>진행 프로젝트</h2>
 						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
 					</header>
 					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+						<article class="box style2">
+								<span><img src="images/kms_pr.png" alt="" /></span>
 								<h3><a href="#">Magna feugiat</a></h3>
 								<p>Ornare nulla proin odio consequat.</p>
 							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Veroeros primis</a></h3>
+								<span><img src="images/kms_pr.png" alt="" /></span>
+								<h3><a href="#">Magna feugiat</a></h3>
 								<p>Ornare nulla proin odio consequat.</p>
 							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Lorem ipsum</a></h3>
+								<span><img src="images/kms_pr.png" alt="" /></span>
+								<h3><a href="#">Magna feugiat</a></h3>
 								<p>Ornare nulla proin odio consequat.</p>
 							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								<h3><a href="#">Tempus dolore</a></h3>
+								<span><img src="images/kms_pr.png" alt="" /></span>
+								<h3><a href="#">Magna feugiat</a></h3>
 								<p>Ornare nulla proin odio consequat.</p>
 							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-								<h3><a href="#">Feugiat aliquam</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="#">Sed amet ornare</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
 					</div>
 					<footer>
 						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
